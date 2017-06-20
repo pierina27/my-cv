@@ -1,0 +1,32 @@
+<div class="container">
+  <table class="table table-striped table-hover ">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Número de identificación</th>
+      <th>Nombre del perfil</th>
+      <th>Activo</th>
+      <th>Empresa</th>
+      <th>Opciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let perfil of perfiles; let i = index;">
+      <td>{{i}}</td>
+      <td>{{perfil.nombre}}</td>
+      <td>{{perfil.apellido}}</td>
+      <td>{{perfil.identificacion}}</td>
+      <td>{{perfil.nombre_perfil}}</td>
+      <td>{{perfil.estado}}</td>
+      <td>{{perfil.empresa}}</td>
+      <td><button type="button" class="btn btn-default" (click)="">Ver</button>
+          <button type="button" class="btn btn-default" (click)="perfil()">Modificar</button>
+          <button type="button" class="btn btn-default" (click)="">Eliminar</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

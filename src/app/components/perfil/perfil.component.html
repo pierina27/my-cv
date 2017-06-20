@@ -1,0 +1,66 @@
+<div class="container">
+  <form class="form-horizontal" (ngSubmit)="addPerfil()" name="formPerfil">
+    <fieldset>
+      <legend>
+        Agregar nuevo perfil
+      </legend>
+      <div class="form-group">
+        <label for="inputNombrePerfil" class="col-lg-2 control-label">Nombre perfil</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="nombre_perfil" required [(ngModel)]="perfil.nombre_perfil" name="nombre_perfil">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputNombre" class="col-lg-2 control-label">Nombre</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" [(ngModel)]="perfil.nombre" name="nombre">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputApellido" class="col-lg-2 control-label">Apellido</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" [(ngModel)]="perfil.apellido" name="apellido">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="select" class="col-lg-2 control-label">Tipo de identificación</label>
+        <div class="col-lg-10">
+          <select class="form-control" id="inputTipoIdentificacion" [(ngModel)]="perfil.tipo_identificacion" name="tipo_identificacion">
+            <option value="RUT">RUT</option>
+            <option value="RUT TEMPORAL">RUT TEMPORAL</option>
+            <option value="PASAPORTE">PASAPORTE</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputIdentificacion" class="col-lg-2 control-label">Núm. Identificación</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="inputIdentificacion" placeholder="Núm. Identificación"
+                 [(ngModel)]="perfil.identificacion" name="identificacion">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEstado" class="col-lg-2 control-label">Estado</label>
+        <div class="col-lg-10">
+          <select class="form-control" id="inputEstado">
+            <option value="ACTIVO">ACTIVO</option>
+            <option value="INACTIVO">INACTIVO</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmpresa" class="col-lg-2 control-label">Empresa</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="inputEmpresa" placeholder="Empresa"
+                 [(ngModel)]="perfil.empresa" name="empresa">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+          <button type="submit" class="btn btn-primary">Agregar</button>
+          <button type="reset" class="btn btn-default">Cancelar</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
