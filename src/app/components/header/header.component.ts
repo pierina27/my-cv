@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -11,5 +12,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  isIn = false;   // store state
+	toggleState() { // click handler
+	    let bool = this.isIn;
+	    this.isIn = bool === false ? true : false; 
+	}
 
 }

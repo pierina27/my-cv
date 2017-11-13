@@ -49,7 +49,7 @@ export class PerfilService{
   }
 
   setLocalstoragePerfil(perfil:perfil){
-    perfil.id = this.perfiles[this.perfiles.length - 1].id + 1;
+    perfil.id = this.perfiles.length + 1;
     this.perfiles.push(perfil);
     console.log(this.perfiles);
     localStorage.setItem('perfil',JSON.stringify(this.perfiles));
